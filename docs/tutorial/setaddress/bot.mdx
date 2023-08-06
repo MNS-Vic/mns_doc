@@ -1,0 +1,118 @@
+---
+title: 机器人设置解析
+description: MNS（Mixin Name Service）
+---
+
+# 机器人设置解析
+
+## 第一步 - 设置机器人的域名管理人
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+import { signAccessToken } from "@mixin.dev/mixin-node-sdk";
+import { v4 as uuid } from "uuid";
+const requestID = uuid();
+// bot keystore
+const jwtToken = signAccessToken("GET", "/me", "", requestID, keystore);
+import axios from "axios";
+
+// 定义请求的 URL 和要发送的数据
+const url = "https://api.mixin.domains/api";
+const data = {
+  jwtToken: "jwtToken",
+  requestId: "requestId",
+  mixinId: "bindMixinId",
+};
+
+// 发送 POST 请求
+axios
+  .post(url, data)
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    // 请求失败处理错误信息
+    console.error(error);
+  });
+```
+
+</TabItem>
+<TabItem value="go" label="Go">
+
+```go
+package main
+
+import (
+	"context"
+  "bytes"
+	"fmt"
+	"github.com/MixinNetwork/bot-api-go-client"
+  "github.com/google/uuid"
+  "net/http"
+	"net/url"
+)
+
+const (
+	clientId   = ""
+	sessionId  = ""
+	privateKey = ""
+)
+
+func main() {
+	ctx := context.Background()
+	//Sign authentication token.
+	authenticationToken, err := bot.SignAuthenticationToken(clientId, sessionId, privateKey, "GET", "/me", "")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+  requestId := uuid.New()
+	// Read asset list
+	assets, err := bot.AssetList(ctx, authenticationToken)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+  url := "https://api.mixin.domains/api"
+	// 准备要发送的数据
+	data := url.Values{}
+	data.Set("jwtToken", authenticationToken)
+	data.Set("requestId", requestId)
+	data.Set("mixinId", "bindMixinId")
+
+	// 发起 POST 请求
+	resp, err := http.PostForm(url, data)
+	if err != nil {
+		fmt.Println("Error making request:", err)
+		return
+	}
+	defer resp.Body.Close()
+	fmt.Println("Response status:", resp.Status)
+}
+
+```
+
+</TabItem>
+</Tabs>
+
+## 第二步 - 管理人在界面完成设置
+
+域名管理人设置成功后，管理人连接 MNS 机器人，点击设置域名按钮后，将出现"为 Mixin 机器人设置域名（Set alias for Mixin robot）"选项。点击该选项，按操作提示完成设置。
+
+<img
+  src={require("../../../static/images/setforrobot1.png").default}
+  alt="image-20230806135434356"
+  style={{ zoom: 25 + "%" }}
+/>
+
+<img
+  src={require("../../../static/images/setforrobot2.png").default}
+  alt="image-20230806135434356"
+  style={{ zoom: 25 + "%" }}
+/>
