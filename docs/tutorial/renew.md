@@ -3,20 +3,34 @@ title: 续费
 description: MNS（Mixin Name Service）
 ---
 
-# 第一步 - 搜索域名
+# 续费
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Donec id elit non mi porta gravida at eget metus.
+## 第一步 - 选择需要续费的域名
 
-# The Basics
+在“Mine“界面点击需要续费的域名，在信息卡中点击续费。
 
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+<img src="C:\Users\79071\Documents\GitHub\mns_doc\static\images\renew1.png" alt="image-20230806142434434" style="zoom:25%;" />
 
-# Creating a Project
+## 第二步 - 点击续费按钮
 
-Nullam quis risus eget urna mollis ornare vel eu leo. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+使用“+”、“-”按钮调整续费时长。点击按钮付费。
 
-# Organizing your Projects
+<img src="C:\Users\79071\Documents\GitHub\mns_doc\static\images\renew2.png" alt="image-20230806142758435" style="zoom:25%;" />
 
-Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Donec ullamcorper nulla non metus auctor fringilla. Donec sed odio dui.
-Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+## 第三步 - 发送旧的NFT
+
+点击按钮发送需要续费的NFT。
+
+<img src="C:\Users\79071\Documents\GitHub\mns_doc\static\images\renew3.png" alt="image-20230806143051706" style="zoom:25%;" />
+
+## 第四步 - 完成界面操作
+
+点击按钮完成界面操作。
+
+<img src="C:\Users\79071\Documents\GitHub\mns_doc\static\images\renew4.png" alt="image-20230806143353696" style="zoom:25%;" />
+
+## 第五步 - 等待通知
+
+流程结束后，机器人将发送通知。
+
+<img src="C:\Users\79071\Documents\GitHub\mns_doc\static\images\renew5.png" alt="image-20230806143742118" style="zoom:25%;" />
