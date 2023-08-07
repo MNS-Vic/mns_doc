@@ -15,9 +15,7 @@ MNS 服务是跨网协同的架构。智能合约部署于 MVM（Mixin Virtual M
 - NFO 铸造域名 NFT
 
 ![MNS架构示意图](../static/images/app.png)
+<center>MNS架构示意图</center>
 
-MNS 架构示意图
 
-参考：
-
-[术语](term)
+参考：[术语](term)

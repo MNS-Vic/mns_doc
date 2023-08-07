@@ -13,8 +13,6 @@ MNS（Mixin Name Service）是 Mixin 生态的域名服务。用户可以使用�
 # 教程链接
 
 ### [- 注册](tutorial/register.md) 
-
 ### [- 续费](tutorial/renew.md) 
-
 ### [- 设置解析](tutorial/setaddress/user)
 
