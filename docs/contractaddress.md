@@ -13,8 +13,8 @@ description: MNS（Mixin Name Service）
 0x2136c2646e0C4ca5e9220119b9E70c5324f09642<br />
 继承ERC721合约，包含具体注册、续费相关的逻辑。
 
-## MNS价格控制器合约
-0x760254D7477A10ECd0751c37b1611Cee52Cb364a<br />
+## STABLEPRICEORACLE
+0x2187d5855f75ae888E7D06a609EDddD4a4A309Ba<br />
 设置价格，计算价格，设置五个等级的价格。
 - L1: 1 位字符
 - L2:2 位字符
@@ -22,26 +22,26 @@ description: MNS（Mixin Name Service）
 - L4:4 位字符
 - L5:5 位及以上字符
 
-## MNS价格基数合约
-0xc436f914A2B975C3931e44FE6485147a3fb42d4F<br />
+## DUMMYORACLE
+0x8a1797cAd2538EEA75b9F17F0d13cf28724f2617<br />
 设置一个价格基数，调整价格基数直接改变各个位数的域名价格。
 
-## MNS公共解析器合约
-0x8Df6056035e75Eb2C704629494f815A0a47dee91<br />
-解析 name->address 的关系，由于基于 Mixin 网络，所有域名与 NFT 拥有关系在 NFO 中记录，在此处的 address 统一设置为合约拥有者地址。
+## MNSRESOLVER
+0x6C9cAc6742097b20c906B8A9f0a9e8f17efCD9C0<br />
+解析 name->address 的关系。
 
-## MNS逆向解析合约
-0xc3DEd0C1c1D8e74463860b1B278BCc993990d41c<br />
-解析 address->name 的关系，由于基于 Mixin 网络，所有域名与 NFT 拥有关系在 NFO 中记录，在此处的 address 统一设置为合约拥有者地址。
+## REVERSEREGISTRAR
+0x18adabF90f4F144DC91547922A4B01B2E77496b0<br />
+解析 address->name 的关系。
 
 ## MNS控制器主合约
-0xD5560A510A829bb45cE18E4Fd304f92d380AE1c0<br />
+0xe6c74ff4F72a07f456782370965C264984BFD02B<br />
 MNS 整套合约的主入口，主要功能如下：
 1.查询注册或续费某个域名的价格 
 2.查询域名是否已被注册 
 3.注册域名 
 4.续费域名
 
-## MVM代理合约
-0x9E0e95EbD18AADbc6D21F1ec96CD9f7f556d55c7<br />
-基于 Mixin架构下的适配代理合约（参考：[https://mvm.dev/zh/registry/registry.html](https://mvm.dev/zh/registry/registry.html)），注册续费域名不支持操作控制器合约，而是操作此代理合约。只有代理合约有权限操作控制器合约。在代理合约中，会验证交易的 Token 是否满足，调用控制器合约进行 注册或续费，并扣除对应的 XIN Token。
+## MNSREGISTRY 
+0x6f5Cbf87Df9eBeFdfda2a2A5c83C911B03610F90<br />
+基于 Mixin架构下的适配代理合约（参考：[https://mvm.dev/zh/registry/registry.html](https://mvm.dev/zh/registry/registry.html)），注册续费域名不支持操作控制器合约，而是操作此代理合约。只有代理合约有权限操作控制器合约。在代理合约中，会验证交易的 Token 是否满足，调用控制器合约进行注册或续费。
